@@ -30,6 +30,7 @@ body {
     display: flex;
     list-style: none;
     gap: 50px;
+    padding-top: 25px;
 }
 
 .header img {
@@ -44,6 +45,7 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+
 /* HERO */
 
 .img-container {
@@ -51,7 +53,6 @@ body {
     height: 80%;
     background-position: center;
     background-repeat: no-repeat;
-
     }
 
 .inner-container {
@@ -106,14 +107,16 @@ a {
     border-radius: 20px;
 }
 
-@media only screen and (max-width:920opx) {
+@media only screen and (max-width:992px) {
     .inner-container {
         margin-top:100px;
 
     }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 576px) {
+    .
+    
     .inner-container{
         margin-top: 150px;
     }
@@ -123,4 +126,5 @@ a {
     h2 {
         font-size: 20px;
     }
+
 }

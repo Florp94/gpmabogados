@@ -24,7 +24,10 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+    position: fixed;
+    top: 0;
 }
+
 
 .navbar ul {
     display: flex;
@@ -45,14 +48,27 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+.navbar i {
+    font-size: 36px;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}
 
 /* HERO */
 
+.main_hero {
+    margin-top: 70px;
+}
+ 
 .img-container {
     background-image: url(./assets/imagenhero/gavel-g5847fb54f_1920.jpg);
-    height: 80%;
+    height: 90%;
     background-position: center;
     background-repeat: no-repeat;
+    
     }
 
 .inner-container {
@@ -65,7 +81,7 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-family:'Playfair Display', serif ;
 
 }
@@ -101,27 +117,78 @@ a {
 }
 
 .hero_contacto:hover, .hero_contacto:active {
-    background-color: #46474e;
-    color:#4d0a0a;
+    background-color: #4d0a0a;
+    color:#EFF1ED;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
     border-radius: 20px;
 }
 
-@media only screen and (max-width:992px) {
-    .inner-container {
-        margin-top:100px;
+/* MEDIAQUERIES */
 
+@media (max-width:992px) {  
+    .main_hero {
+        text-align: center;
+        width: 70%;
+        align-items: center;
     }
+    
+
+    .main_hero h1 {
+        display: block;
+        width: 100%;
+    }
+    
+    .main_hero .inner-container h1 {
+    max-width: 80%;
+    font-size: 25px;
 }
 
-@media only screen and (max-width: 576px) {
-    .
-    
+    .button-container {
+    justify-content: center;
+}
+
+    .img-container {
+    max-width:100%;
+
+}
+}
+
+
+
+@media (max-width: 576px) {
+    .navbar ul {
+        background-color: #EFF1ED;
+        width: 100%;
+        height: calc(100vh - 70px);
+        position:absolute;
+        top: 70px;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(200%);
+        transition: all 0.4s ease-out;
+    }
+    .navbar i {
+        display: block;
+    }
+
+    #toggle-menu {
+        order: 2;
+        flex:1;
+    }
+
+    #toggle-menu:checked ~ .nav_item {
+        transform: translateX(0%);
+        transition: all 0.4s ease-in;
+    }
     .inner-container{
         margin-top: 150px;
+        text-align: center;
+        justify-content: center;
     }
     h1 {
-        font-size: 30px;
+        font-size: 100px;
     }
     h2 {
         font-size: 20px;
